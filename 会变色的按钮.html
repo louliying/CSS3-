@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>会变色的按钮</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+        }
+        body{
+            padding: 200px;
+        }
+        .colorful-btn{
+            position: relative;
+            appearance:none;
+            background:#f72359;
+            padding: 20px 60px;
+            border: none;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            outline: none;
+            overflow: hidden;
+            border-radius:  100px;
+        }
+        .colorful-btn span{
+            position: relative;
+        }
+        .colorful-btn::before{
+            --size: 0;
+
+            content: '';
+            position: absolute;
+            left: var(--x);
+            top: var(--y);
+            width:  var(--size);
+            height:  var(--size);
+            background: radial-gradient(circle closest-side, #4405f7, transparent);
+            transform: translate(-50%, -50%);
+            transition: width 0.2s ease, height 0.2s ease;
+        }
+        .colorful-btn:hover::before{
+            --size: 400px;
+        }
+    </style>
+</head>
+<body>
+    <button class="colorful-btn"><span>我是五彩按钮</span></button>
+    <script>
+        window.onload = () => {
+            document.querySelector('.colorful-btn').onmousemove = (e) => {
+                const x = e.pageX - e.target.offsetLeft;
+                const y = e.pageY - e.target.offsetTop;
+
+                e.target.style.setProperty('--x', `${ x }px`);
+                e.target.style.setProperty('--y', `${ y }px`);
+            }
+        }
+    </script>
+</body>
+</html>

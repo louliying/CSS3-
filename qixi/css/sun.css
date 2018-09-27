@@ -1,0 +1,47 @@
+ /*-------- 太阳自转以及动画 --------*/
+        #sun {
+            animation-duration: 60s;
+            animation-fill-mode: forwards;
+            animation-name: rotation;
+            background: url(../images/sun.png) 0 0 no-repeat;
+            height: 201px;
+            position: absolute;
+            right: 100px;
+            top: -30px;
+            transform: rotate(45deg);
+            width: 201px;
+            z-index: 1;
+        }
+        
+        /* .rotation {
+            -webkit-animation-name: rotation;
+            -webkit-animation-duration: 30s;
+            -moz-animation-name: rotation;
+            -moz-animation-duration: 30s;
+        } */
+        
+        @keyframes rotation {
+            0% {
+                transform: translateX(0px) translateY(0px) rotate(45deg);
+            }
+            100% {
+                transform: translateX(-2000px) translateY(400px) rotate(70deg);
+            }
+        }
+        
+        @-webkit-keyframes rotation {
+            0% {
+                transform: translateX(0px) translateY(0px) rotate(45deg);
+            }
+            100% {
+                transform: translateX(-2000px) translateY(400px) rotate(70deg);
+            }
+        }
+        @-moz-keyframes rotation {
+            0% {
+                transform: translateX(0px) translateY(0px) rotate(45deg);
+            }
+            100% {
+                transform: translateX(-2000px) translateY(400px) rotate(70deg);
+            }
+        }

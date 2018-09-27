@@ -1,0 +1,117 @@
+		.charector{
+			 height: 291px;
+		    left: -6%;
+		    position: absolute;
+		    top: 55%;
+		    width: 151px;
+			background: url(../images/boy.png) 0 -291px no-repeat;
+		}
+		
+		.slowWalk {
+		    animation-duration: 950ms;
+		    animation-iteration-count: infinite;
+		    animation-name: person-slow;
+		    animation-timing-function: steps(1, start);
+		}
+
+
+		/* .slowWalk{
+			 -webkit-animation-name: person-slow; 
+		    规定动画完成一个周期所花费的秒或毫秒。默认是 0
+		    -webkit-animation-duration: 950ms;
+		    规定动画被播放的次数。默认是 1。 infinite(循环播放)
+		    -webkit-animation-iteration-count: infinite;
+		    动画切换的方式是一帧一帧的改变
+		    -webkit-animation-timing-function: steps(1, start);
+		    -moz-animation-name: person-slow;
+		    -moz-animation-duration: 950ms;
+		    -moz-animation-iteration-count: infinite;
+		    -moz-animation-timing-function: steps(1, start)
+		} */
+		
+	    /* 人物暂停 */
+        .pauseWalk {
+            -webkit-animation-play-state: paused;
+            -moz-animation-play-state: paused;
+        }
+			
+		.slowFlolerWalk {
+		    animation-duration: 950ms;
+		    animation-iteration-count: infinite;
+		    animation-name: person-floler-slow;
+		    animation-timing-function: step-start;
+		}
+		
+        
+		@keyframes person-slow {
+			0% {
+			    background-position: 0 -291px;
+			}
+			25% {
+			    background-position: -602px 0;
+			}
+			50% {
+			    background-position: -302px -291px;
+			}
+			75% {
+			    background-position: -151px -291px;
+			}
+			100% {
+			    background-position: 0 -291px;
+			}
+		}
+		@keyframes person-floler-slow {
+			0% {
+			    background-position: -453px 0;
+			}
+			25% {
+			    background-position: -904px 0;
+			}
+			50% {
+			    background-position: -451px 0;
+			}
+			75% {
+			    background-position: -753px 0;
+			}
+			100% {
+			    background-position: -300px 0;
+			}
+		}
+		.boy-rotate {
+		    animation-duration: 850ms;
+		    animation-fill-mode: forwards;
+		    animation-iteration-count: 1;
+		    animation-name: boy-rotate;
+		    animation-timing-function: step-start;
+		}
+		@keyframes boy-rotate {
+			16.7% {
+			    background-position: -150px 0;
+			}
+			33.4% {
+			    background-position: -453px -291px;
+			}
+			50.1% {
+			    background-position: 0 0;
+			}
+			66.8% {
+			    background-position: -903px -291px;
+			}
+			83.5% {
+			    background-position: -753px -291px;
+			}
+			100% {
+			    background-position: -603px -291px;
+			}
+		}
+		.button {
+		    position: absolute;
+		    top: 82%;
+		}
+		button {
+		    height: 50px;
+		    width: 80px;
+		}
+		.boyOriginal {
+		    background-position: -150px 0;
+		}

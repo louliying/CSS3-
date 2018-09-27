@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>font face demo</title>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		body{
+			background-color: lightseagreen;
+			color:#fff;
+		}
+		ul{
+			width: 900px;
+			margin: 0 auto;
+			overflow: hidden;
+			zoom:1;
+		}
+		li{
+			float: left;
+			width: 100px;
+			height: 100px;
+			margin: 20px;
+			line-height: 100px;
+			list-style: none;
+			font-size: 32px;
+			text-align: center;
+			cursor: pointer;
+		}
+		@font-face{
+			font-family: 'icomoon';
+		    src:    url('fonts/icomoon.eot?62s55w');
+		    src:    url('fonts/icomoon.eot?62s55w#iefix') format('embedded-opentype'),
+		        url('fonts/icomoon.ttf?62s55w') format('truetype'),
+		        url('fonts/icomoon.woff?62s55w') format('woff'),
+		        url('fonts/icomoon.svg?62s55w#icomoon') format('svg');
+		    font-weight: normal;
+		    font-style: normal;
+		}
+		.icomoon{
+			font-family: 'icomoon' !important;
+		    speak: none;
+		    font-style: normal;
+		    font-weight: normal;
+		    font-variant: normal;
+		    text-transform: none;
+		    /* Better Font Rendering =========== */
+		    -webkit-font-smoothing: antialiased;
+		    -moz-osx-font-smoothing: grayscale;
+		}
+		
+		.icon1:before{
+			content: "\e900";
+		}
+		.icon2:before{
+			content: "\e901";
+		}
+		.icon3:before{
+			content: "\e902";
+		}
+		.icon4:before{
+			content: "\e903";
+		}
+		.icon5:before{
+			content: "\e904";
+		}
+
+		.shadow{
+			text-shadow:2px 2px 0 pink, 6px 6px 0 rgba(0,0,0,0.8);
+		}
+
+		.spinner{
+			animation: spinner 2s infinite linear;
+			-webkit-animation: spinner 2s infinite linear;
+			-moz-animation: spinner 2s infinite linear;
+			-o-animation: spinner 2s infinite linear;
+			-ms-animation: spinner 2s infinite linear;
+		}
+		@keyframes spinner{
+			0%{
+				-moz-transform:rotate(0);
+			}
+			100%{
+				-moz-transform:rotate(359deg);
+			}
+		}
+		@-webkit-keyframes spinner{
+			0%{
+				-webkit-transform:rotate(0);
+			}
+			100%{
+				-webkit-transform:rotate(359deg);
+			}
+		}
+		@-moz-keyframes spinner{
+			0%{
+				-moz-transform:rotate(0);
+			}
+			100%{
+				-moz-transform:rotate(359deg);
+			}
+		}
+
+		.love{
+			position: relative;
+		}
+		.love:before{
+			content:"\e903";
+		}
+		.love:after{
+			content:"\e904";
+		}
+		.love:before,.love:after{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+		.love:after{
+			z-index:0;
+			color:#cecece;
+			-webkit-backface-visibility:hidden;
+			-moz-backface-visibility:hidden;
+			backface-visibility:hidden;
+		}
+		.love:before{
+			z-index: 1;
+			color: #ea515e;
+			-webkit-transform:scale(0);
+			-moz-transform:scale(0);
+			-o-transform:scale(0);
+			-ms-transform:scale(0);
+			transform:scale(0);
+			opacity: 0;
+			-webkit-transition:none;
+			-moz-transition:none;
+			-o-transition:none;
+			-ms-transition:none;
+			transition:none;
+		}
+		.love:hover:before{
+			-webkit-animation:scaleFade 0.5s forwards;
+			-moz-animation:scaleFade 0.5s forwards;
+			-o-animation:scaleFade 0.5s forwards;
+			-ms-animation:scaleFade 0.5s forwards;
+			animation:scaleFade 0.5s forwards;
+		}
+		@keyframes scaleFade{
+			50%{
+				opacity: 1;
+				transform:scale(1);
+			}
+			100%{
+				opacity: 0;
+				transform:scale(2.5);
+			}
+		}
+		@-webkit-keyframes scaleFade{
+			50%{
+				opacity: 1;
+				-webkit-transform:scale(1);
+			}
+			100%{
+				opacity: 0;
+				-webkit-transform:scale(2.5);
+			}
+		}
+		@-moz-keyframes scaleFade{
+			50%{
+				opacity: 1;
+				-moz-transform:scale(1);
+			}
+			100%{
+				opacity: 0;
+				-moz-transform:scale(2.5);
+			}
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		<li class="icomoon">&#xe900;</li>
+		<li class="icomoon">&#xe901;</li>
+		<li class="icomoon">&#xe902;</li>
+		<li class="icomoon">&#xe903;</li>
+		<li class="icomoon">&#xe904;</li>
+	</ul>
+
+	<ul>
+		<li class="icomoon icon1"></li>
+		<li class="icomoon icon2 spinner"></li>
+		<li class="icomoon icon3 spinner"></li>
+		<li class="icomoon icon4 love"></li>
+		<li class="icomoon icon5 shadow"></li>
+	</ul>
+</body>
+</html>

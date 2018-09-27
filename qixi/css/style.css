@@ -1,0 +1,73 @@
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, del, dfn, em, img, ins, kbd, q, samp, small, strong, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, table, tbody, tfoot, thead, tr, th, td, article, aside, footer, header, nav, section {
+    background: none repeat scroll 0 0 transparent;
+    border: 0 none;
+    font-size: 100%;
+    margin: 0;
+    outline: 0 none;
+    padding: 0;
+    vertical-align: baseline;
+}
+body {
+    font-family: sans-serif;
+}
+h1 {
+    color: #212121;
+    font-size: 33px;
+    margin: 50px 0 15px;
+    text-align: center;
+}
+h2 {
+    color: #3c3c3c;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 20px 10px 10px;
+}
+small {
+    display: block;
+    font-size: 12px;
+    margin: 0 10px 30px;
+}
+a {
+    color: #3c3c3c;
+    font-size: 12px;
+    margin: 0 0 0 10px;
+}
+img {
+    border: 0 none;
+}
+ol, ul, li {
+    list-style-type: none;
+}
+html, body {
+    backface-visibility: hidden;
+    height: 100%;
+    transform-style: preserve-3d;
+    width: 100%;
+}
+#content {
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+}
+.content_wrap {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+.content_wrap > li {
+    background-size: 100% 100%;
+    float: left;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+   /*主体部分*/
+   
+  
+   
+  
